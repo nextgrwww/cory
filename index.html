@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christina Gray - Portfolio</title>
+  <title>Christina Cory - Portfolio</title>
   
   <!-- Bootstrap CSS for precise layout match -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,6 +38,8 @@
     .font-family-mono { font-family:Roboto Mono,monospace; }
     .fw-semi-bold { font-weight:600; }
     .line-height-100 { line-height:1; }
+    .line-height-140 { line-height: 1.4; }
+    .text-yellow { color:#ffb657; }
 
     /* Layout Containers */
     .sections-wrapper { padding-bottom:3em; }
@@ -133,6 +135,62 @@
     .services-list .services-item .services-title { min-width:270px; padding-right:36px; display:flex; align-items:center; gap:15px; }
     .services-list .services-item .services-title i { font-size:2rem; color:#000; }
     @media (max-width:1199.98px) { .services-list .services-item { padding:20px 0; flex-direction:column; align-items:flex-start; } .services-list .services-item .services-number { margin-bottom:6px; } }
+
+    /* Testimonial Box */
+    .testimonial-box { padding-left:16px; padding-top:16px; position:relative; }
+    .testimonial-box svg.icon { left:0; opacity:.1; position:absolute; top:0; width:3.3em; z-index:-1; }
+    .img-mask-avatar-sm { height:70px; min-width:70px; width:70px; border-radius: 50%; object-fit: cover; }
+
+    /* Resume Section */
+    .resume-wrapper { padding-left:20px; position:relative; }
+    .resume-wrapper:before { border-left:1px dashed rgba(0,0,0,.2); content:""; height:100%; left:0; position:absolute; top:0; }
+    .resume-wrapper i { color:#000; }
+    .resume-wrapper .resume-box { margin-bottom:30px; }
+    .resume-wrapper .resume-box:last-child { margin-bottom:0; }
+    .resume-wrapper .resume-box .resume-date { border:1px dashed rgba(0,0,0,.2); border-radius:2em; display:inline-block; font-family:Roboto Mono,monospace; font-size:.9em; font-weight:500; letter-spacing:.5px; margin-bottom:1em; padding:.5em 1em; position:relative; text-transform:uppercase; transition:.1s linear; }
+    .resume-wrapper .resume-box .resume-date:before { border-top:1px dashed rgba(0,0,0,.2); content:""; height:1px; left:-20px; position:absolute; top:50%; transform:translateY(-50%); width:20px; }
+    .resume-wrapper .resume-box .resume-date:after { background:#000; border-radius:50%; content:""; height:5px; left:-23px; position:absolute; top:50%; transform:translateY(-50%); width:5px; }
+    .resume-wrapper .resume-box:hover .resume-date { color:#000; }
+    .icon-2xl i { font-size: 1.86em; }
+
+    /* Blog Section */
+    .blog-post-box { align-items:center; display:inline-flex; margin-bottom:24px; width: 100%; }
+    .blog-post-box:last-child { margin-bottom:0; }
+    .blog-post-box .blog-post-img { border-radius:.5em; overflow:hidden; position:relative; transform:translateZ(0); display:inline-block; flex-shrink: 0; }
+    .blog-post-box .blog-post-img img { transform:scale(1); transition:transform .4s cubic-bezier(.165,.84,.44,1); width:340px; height: 100%; object-fit: cover; }
+    .blog-post-box .blog-post-img .blog-post-category { backdrop-filter:blur(5px); background:#0003; border-radius:2em; color:#fff; font-family:Roboto Mono,monospace; font-size:.9em; font-weight:400; left:16px; letter-spacing:.5px; padding:.5em 1em; position:absolute; text-transform:uppercase; top:16px; }
+    .blog-post-box .blog-post-img .blog-post-category a { color:#fff; text-decoration: none; }
+    .blog-post-box .blog-post-img:hover img { filter:blur(1.5px); transform:scale(1.04); }
+    .blog-post-box .blog-post-caption { display:inline-block; padding-left:30px; }
+    .link-decoration { color:#000000e6; }
+    .link-decoration:focus, .link-decoration:hover { color:#000; text-decoration:underline; }
+    @media (max-width:1199.98px) {
+      .blog-post-box { margin-bottom:40px; display: block; }
+      .blog-post-box .blog-post-img img { width:100%; }
+      .blog-post-box .blog-post-caption { padding-top:20px; padding-left:0; }
+    }
+    @media (max-width:991.98px) { .blog-post-box { margin-bottom:30px; } }
+
+    /* Buttons */
+    .button { background:#000; border-radius:2em; color:#fff; display:inline-block; font-family:Roboto Mono,monospace; font-size:.9em; overflow:hidden; padding:14px 32px; position:relative; transition:.12s ease-out; border:none; text-decoration: none; }
+    .button:hover { background:#000000e6; color:#fff; }
+    .button.button-outline { background:transparent; border:1px dashed #000; color:#000; }
+    .button.button-outline:hover { background:#000; color:#fff; }
+    .button-sm { padding:10px 22px; }
+    .button-md { padding:14px 32px; }
+
+    /* Inputs & Forms */
+    input:not(.form-check-input), textarea { background:transparent; border:none; border-bottom:1px dashed rgba(0,0,0,.2); box-shadow:none; font:400 14px Open Sans,sans-serif; margin-bottom:2rem; padding:0 0 1rem; transition:.16s ease-out; width:100%; color:#000; outline: none; }
+    input:not(.form-check-input):active, input:not(.form-check-input):focus, textarea:active, textarea:focus { border-color:#000; }
+    textarea { height:140px; resize: none; }
+
+    /* Map */
+    .gmap { width:100%; }
+    .gmap-sm { height:350px; }
+    @media (max-width:991.98px) { .gmap-sm { height:300px; } }
+    .border-radius { border-radius:.5em; overflow:hidden; }
+    .box-shadow { box-shadow:0 8px 26px #16181a1c; transition:.16s ease-out; }
+    .box-shadow:hover { box-shadow:0 8px 32px #16181a26; }
   </style>
 </head>
 <body>
@@ -150,6 +208,9 @@
     );
     const SearchIcon = () => (
       <svg className="svg-inline--fa fa-magnifying-glass pe-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+    );
+    const QuoteRightIcon = () => (
+      <svg className="svg-inline--fa fa-quote-right pe-2 icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 296c0 66.3-53.7 120-120 120l-8 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l8 0c30.9 0 56-25.1 56-56l0-8-64 0c-35.3 0-64-28.7-64-64l0-64c0-35.3 28.7-64 64-64l64 0c35.3 0 64 28.7 64 64l0 32 0 32 0 72zm-256 0c0 66.3-53.7 120-120 120l-8 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l8 0c30.9 0 56-25.1 56-56l0-8-64 0c-35.3 0-64-28.7-64-64l0-64c0-35.3 28.7-64 64-64l64 0c35.3 0 64 28.7 64 64l0 32 0 32 0 72z"></path></svg>
     );
 
     // --- Main Application ---
@@ -228,7 +289,7 @@
               </div>
               <div className="col-lg-8 col-xl-9 col-12 order-lg-1">
                 <div className="py-4">
-                  <h1 className="display-2 fw-semi-bold m-0">Christina <span className="stroke-text">Gray</span></h1>
+                  <h1 className="display-2 fw-semi-bold m-0">Christina <span className="stroke-text">Cory</span></h1>
                 </div>
               </div>
             </div>
@@ -276,7 +337,7 @@
                       <div className="hero-avatar">
                         <img 
                           src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600&h=600" 
-                          alt="Christina Gray" 
+                          alt="Christina Cory" 
                         />
                         <div className="hero-avatar-text">
                           <span className="text-white">{text}</span>
@@ -424,6 +485,168 @@
                       ))}
                     </ul>
                   </div>
+                </div>
+
+                {/* 4. Testimonial Section */}
+                <div className="section-box mt-4" id="testimonial">
+                  <div className="row align-items-center">
+                    <div className="col-12">
+                      <h6 className="title-heading mb-4" data-backdrop-text="testimonial">What People Say</h6>
+                    </div>
+                  </div>
+                  <div className="row mt-4">
+                    {[
+                      { text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis', name: 'Richart Styers', role: 'CTO - FlaTheme', img: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=100' },
+                      { text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis', name: 'Sandra Radford', role: 'Project Manager', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100' }
+                    ].map((review, i) => (
+                      <div key={i} className="col-md-6 mb-4 mb-md-0">
+                        <div className="testimonial-box">
+                          <QuoteRightIcon />
+                          <div className="d-block text-yellow mb-3">
+                            <i className="bi bi-star-fill pe-1"></i><i className="bi bi-star-fill pe-1"></i><i className="bi bi-star-fill pe-1"></i><i className="bi bi-star-fill pe-1"></i><i className="bi bi-star-fill"></i>
+                          </div>
+                          <p>{review.text}</p>
+                        </div>
+                        <div className="d-flex align-items-center mt-3">
+                          <div className="d-inline-block me-3">
+                            <img src={review.img} className="img-mask-avatar-sm" alt={review.name} />
+                          </div>
+                          <div className="d-inline-block">
+                            <h5 className="fw-medium m-0 line-height-140">{review.name}</h5>
+                            <span className="font-small fw-normal">{review.role}</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 5. Resume Section */}
+                <div className="section-box mt-4" id="resume">
+                  <div className="row">
+                    <div className="col-md-10 col-xl-8 col-12">
+                      <h6 className="title-heading mb-4" data-backdrop-text="Resume">Resume</h6>
+                      <h1>Education & Experience</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                    </div>
+                  </div>
+                  <div className="row g-4 g-lg-5 mt-0">
+                    <div className="col-xl-6 col-12">
+                      <div className="resume-wrapper">
+                        <div className="icon-2xl mb-3"><i className="bi bi-mortarboard line-height-100"></i></div>
+                        <div className="resume-box">
+                          <span className="resume-date">2020 - 2023</span>
+                          <h5 className="fw-medium">Bachelor Degree of Business</h5>
+                          <span>@ University of Business</span>
+                        </div>
+                        <div className="resume-box">
+                          <span className="resume-date">2018 - 2020</span>
+                          <h5 className="fw-medium">Master Degree of Design</h5>
+                          <span>@ University of IT</span>
+                        </div>
+                        <div className="resume-box">
+                          <span className="resume-date">2014 - 2018</span>
+                          <h5 className="fw-medium">Bachelor Degree of Design</h5>
+                          <span>@ University of Design</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xl-6 col-12">
+                      <div className="resume-wrapper">
+                        <div className="icon-2xl mb-3"><i className="bi bi-briefcase line-height-100"></i></div>
+                        <div className="resume-box">
+                          <span className="resume-date">2020 - Present</span>
+                          <h5 className="fw-medium">Director of Operations</h5>
+                          <span>@ FlaTheme</span>
+                        </div>
+                        <div className="resume-box">
+                          <span className="resume-date">2018 - 2020</span>
+                          <h5 className="fw-medium">Senior Designer</h5>
+                          <span>@ FlaTheme</span>
+                        </div>
+                        <div className="resume-box">
+                          <span className="resume-date">2015 - 2018</span>
+                          <h5 className="fw-medium">UI & UX Designer</h5>
+                          <span>@ FlaTheme</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 6. Blog Section */}
+                <div className="section-box mt-4" id="blog">
+                  <div className="row">
+                    <div className="col-md-10 col-xl-8 col-12">
+                      <h6 className="title-heading mb-4" data-backdrop-text="Blog">Blog</h6>
+                      <h1>Latest Blog Posts</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 mt-lg-5">
+                    {[
+                      { title: '4 years of working from home', date: 'May 17, 2025', category: 'Experience', img: 'https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&q=80&w=400' },
+                      { title: 'Importance of outdoor times', date: 'Mar 22, 2025', category: 'Health', img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=400' },
+                      { title: 'Fun drinks to make at home', date: 'Jan 18, 2025', category: 'Foods', img: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=400' },
+                      { title: 'Benefits of eating healthy', date: 'Dec 25, 2024', category: 'Health', img: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=400' }
+                    ].map((post, i) => (
+                      <div key={i} className="blog-post-box">
+                        <div className="blog-post-img">
+                          <a href="#">
+                            <img src={post.img} alt={post.title} />
+                          </a>
+                          <div className="blog-post-category">
+                            <a href="#" className="category-tag">{post.category}</a>
+                          </div>
+                        </div>
+                        <div className="blog-post-caption">
+                          <p className="mb-2">Posted on {post.date}</p>
+                          <h2><a href="#" className="link-decoration">{post.title}</a></h2>
+                          <a href="#" className="button button-sm button-outline mt-2"> Read more </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 7. Contact Section */}
+                <div className="section-box mt-4" id="contact">
+                  <div className="row">
+                    <div className="col-md-10 col-xl-8 col-12">
+                      <h6 className="title-heading mb-4" data-backdrop-text="Get In Touch">Get In Touch</h6>
+                      <h1>Get In Touch</h1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                      
+                      <ul className="list-inline-pills mt-4">
+                        <li><a href="tel:+97612349999" className="text-decoration-none color-inherit text-black">Phone: +(976) 12 34 99 99</a></li>
+                        <li><a href="mailto:flatheme@gmail.com" className="text-decoration-none color-inherit text-black">Email: flatheme@gmail.com</a></li>
+                        <li><span className="text-black">Address: 121 King St, Melbourne VIC 3000</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 mt-lg-5">
+                    <div className="contact-form">
+                      <form>
+                        <div className="row gx-3 gy-0">
+                          <div className="col-md-6 col-12">
+                            <input type="text" name="name" placeholder="Name" required />
+                          </div>
+                          <div className="col-md-6 col-12">
+                            <input type="email" name="email" placeholder="E-Mail" required />
+                          </div>
+                        </div>
+                        <input type="text" name="subject" placeholder="Subject" required />
+                        <textarea name="message" placeholder="Message" required rows="5"></textarea>
+                        <button className="button button-md" type="submit">Send Message</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 8. Map Area */}
+                <div className="gmap gmap-sm mt-4 border-radius box-shadow position-relative overflow-hidden mb-5">
+                   <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1200" className="w-100 h-100 object-fit-cover" alt="Map Location" />
                 </div>
 
               </div>
