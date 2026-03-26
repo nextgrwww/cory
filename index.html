@@ -247,7 +247,11 @@
                         <a 
                           className={`nav-link ${activeSection === link.id ? 'active' : ''}`} 
                           href={`#${link.id}`}
-                          onClick={(e) => { e.preventDefault(); setActiveSection(link.id); }}
+                          onClick={(e) => { 
+                            e.preventDefault(); 
+                            setActiveSection(link.id); 
+                            document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+                          }}
                         >
                           <span className="nav-link-desktop">{link.label}</span>
                           <span className="nav-link-mobile">{link.mobile}</span>
